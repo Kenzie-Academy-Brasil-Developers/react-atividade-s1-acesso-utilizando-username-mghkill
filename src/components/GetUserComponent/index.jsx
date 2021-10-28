@@ -5,18 +5,20 @@ const GetUserComponent = ({ user, setUser, setIsLoggedIn }) => {
   };
   return (
     <div>
-      <input
-        className="input__LoggedIn"
-        placeholder="Insira seu nome"
-        type="text"
-        value={user}
-        onChange={(e) => setUser(e.target.value)}
-      ></input>
-      <div>
+      <form action="" method="get">
+        <input
+          className="input__LoggedIn"
+          placeholder="Insira seu nome"
+          type="text"
+          id="userName"
+          name="userName"
+          value={user}
+          onChange={(e) => setUser(e.target.value)}
+        ></input>
         <button className="button__loggedIn" onClick={HandleLogIn}>
           Entrar
         </button>
-      </div>
+      </form>
     </div>
   );
 };
